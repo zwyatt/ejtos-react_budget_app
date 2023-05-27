@@ -11,9 +11,9 @@ const Currency = () => {
         });
     }
     return(
-        <div>
-            <label for='currencySelect'>Currency:</label>
-            <select style={{ 'background-color': 'lightgreen', color: 'white' }} id='currencySelect' value={currency} onChange={(event) => changeCurrency(event.target.value)}>
+        <div className='alert alert-secondary'>
+            <label for='currencySelect'>Currency:&nbsp;</label>
+            <select style={{ 'background-color': 'darkseagreen', color: 'white' }} id='currencySelect' value={currency} onChange={(event) => changeCurrency(event.target.value)}>
                 <option style={{ color: 'black' }} value='$' name='Dollar'>$ Dollar</option>
                 <option style={{ color: 'black' }} value='£' name='Pound'>£ Pound</option>
                 <option style={{ color: 'black' }} value='€ ' name='Euro'>€ Euro</option>
