@@ -9,12 +9,16 @@ const AllocationForm = (props) => {
     const [action, setAction] = useState('');
 
     const submitEvent = () => {
-        if(cost > remaining) {
+        if(cost < 0 || cost === '') {
+            alert('The allocation value must be a positive number.');
+            setCost('');
+            return;
+        } else if(cost > remaining) {
             alert('The value cannot exceed remaining funds $' + remaining);
             setCost('');
             return;
         }
-
+        
         const expense = {
             name: name,
             cost: parseInt(cost)
